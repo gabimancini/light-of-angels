@@ -1,0 +1,25 @@
+#banner {
+    height: 500px;
+    background: url("../asset/img/fondo/fondo.jpeg") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .banner-text {
+        max-width:20%;
+        color: #fff;
+        @media screen and (max-width: 480px){
+             max-width: 90%;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-weight: 200;
+            text-align: center;
+            text-shadow: 10px 10px 8px #000;
+        }
+    }
+
+
+}

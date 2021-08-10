@@ -1,0 +1,73 @@
+#testimonial {
+    .container>div {
+        display: flex;
+        flex-wrap: wrap;
+
+        .testimonial_text,
+        .testimonial_video {
+            width: 50%;
+            @media screen and (max-width: 480px){
+                width: 100%;
+            }
+        }
+
+        .testimonial_text {
+            height: 210px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media screen and (max-width: 480px){
+                padding-top: 40px;
+            }
+
+            .donate {
+                align-self: flex-end
+            }
+        }
+    }
+}
+/* Blockquote */
+blockquote:nth-child(1) {
+    text-indent: -0.45em;
+    border-top: 8px solid #A4D0E9;
+    border-right: 10px solid #A4D0E9;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 1.2rem;
+    padding: 20px;
+    align-self: flex-end
+}
+
+blockquote:nth-child(2) {
+    text-indent: -0.45em;
+    border-top: 8px solid #A4D0E9;
+    border-left: 10px solid #A4D0E9;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 1.2rem;
+    padding: 20px;
+    align-self: flex-start;
+}
+
+@supports (hanging-punctuation: first) {
+    blockquote {
+        text-indent: 0;
+        hanging-punctuation: first;
+    }
+}
+
+blockquote::before {
+    content: open-quote;
+    font-size: 2rem;
+    color: #A4D0E9;
+}
+
+blockquote::after {
+    content: close-quote;
+    font-size: 2rem;
+    color: #A4D0E9;
+}
+
+blockquote {
+    quotes: "“""”""‘""’";
+}

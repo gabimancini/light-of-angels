@@ -1,0 +1,41 @@
+#mission {
+    .container {
+        >div {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        } 
+        .mission_text,
+        .mission_pics {
+            width: 50%;
+            padding: 30px 0;
+            text-align: center;
+            @media screen and (max-width: 480px){
+                width: 100%;
+            }
+            img{
+                max-width: 350px;
+                box-shadow: 5px -5px 5px #abb1b4;
+                @media screen and (max-width: 480px){
+                    max-width: 100%;
+                }
+            }
+           
+            img:nth-child(1){
+                transform: rotate(-20deg);
+            }
+            img:nth-child(2){
+                transform: rotate(6deg);
+            }
+        }
+        .mission_text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+        }
+        .mission_text p{
+            text-align: left;
+        } 
+    }
+}
