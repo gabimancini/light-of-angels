@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200300;;500&display=swap");
+.container h2, #banner .banner-text img, #banner .banner-text p {
+  animation: zoomIn;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+
 * {
   box-sizing: border-box;
 }
