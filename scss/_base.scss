@@ -15,6 +15,7 @@ section{
     padding: 60px 20px;
     h2{
         text-align: center;
+        @extend %zoomIn;
     }
 }
 a{
