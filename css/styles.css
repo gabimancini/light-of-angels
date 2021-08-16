@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200300;;500&display=swap");
-.container h2, #banner .banner-text img, #banner .banner-text p {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.container h2, .banner .banner-text img, .banner .banner-text p {
   animation: zoomIn;
   /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s;
@@ -68,7 +68,7 @@ p, blockquote, figcaption {
   color: #fff !important;
 }
 
-#banner {
+.banner {
   height: 500px;
   background: url("../asset/img/fondo/fondo.jpeg") no-repeat;
   background-size: cover;
@@ -77,22 +77,26 @@ p, blockquote, figcaption {
   align-items: center;
 }
 
-#banner .banner-text {
+.banner .banner-text {
   max-width: 20%;
   color: #fff;
 }
 
 @media screen and (max-width: 480px) {
-  #banner .banner-text {
+  .banner .banner-text {
     max-width: 90%;
   }
 }
 
-#banner .banner-text p {
+.banner .banner-text p {
   font-size: 1.2em;
   font-weight: 200;
   text-align: center;
   text-shadow: 10px 10px 8px #000;
+}
+
+.banner .banner-text h3 {
+  font-weight: 900;
 }
 
 #mission .container > div {
@@ -253,6 +257,32 @@ blockquote::after {
 
 blockquote {
   quotes: "“" "”" "‘" "’";
+}
+
+#section-gallery img {
+  max-width: 300px;
+}
+
+#section-gallery #gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#section-gallery #gallery img {
+  transition: 1.2s;
+}
+
+#section-gallery #gallery img:hover {
+  transform: scale(1.2);
+  border: 10px solid #fff;
+  box-shadow: 10px 10px 10px #000;
+  z-index: 999;
+  cursor: zoom-in;
+}
+
+.banner-gallery {
+  height: auto;
 }
 
 #contact {
