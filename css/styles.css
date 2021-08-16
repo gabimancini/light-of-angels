@@ -259,22 +259,52 @@ blockquote {
   quotes: "“" "”" "‘" "’";
 }
 
-#section-gallery img {
-  max-width: 300px;
+#section-gallery {
+  margin: 0 auto;
+  max-width: 80%;
 }
 
-#section-gallery #gallery {
+#section-gallery h4 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+#section-gallery #gallery ul,
+#section-gallery #gallery2019 ul,
+#section-gallery #gallery2020April ul {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  list-style-type: none;
 }
 
-#section-gallery #gallery img {
+#section-gallery #gallery ul li,
+#section-gallery #gallery2019 ul li,
+#section-gallery #gallery2020April ul li {
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  #section-gallery #gallery ul li,
+  #section-gallery #gallery2019 ul li,
+  #section-gallery #gallery2020April ul li {
+    width: 45%;
+  }
+}
+
+#section-gallery #gallery ul li img,
+#section-gallery #gallery2019 ul li img,
+#section-gallery #gallery2020April ul li img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
   transition: 1.2s;
 }
 
-#section-gallery #gallery img:hover {
-  transform: scale(1.2);
+#section-gallery #gallery ul img:hover,
+#section-gallery #gallery2019 ul img:hover,
+#section-gallery #gallery2020April ul img:hover {
+  transform: scale(1.5);
   border: 10px solid #fff;
   box-shadow: 10px 10px 10px #000;
   z-index: 999;

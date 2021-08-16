@@ -2,13 +2,13 @@
     {
         "id": "001", 
         "name": "mision", 
-        "src": "https://github.com/gabimancini/light-of-angels/tree/main/asset/img/gallery/gallery-1.jpeg"
+        "src": "asset/img/gallery/gallery-1.jpeg"
     },
   
     {
         "id": "002", 
         "name": "mision2", 
-        "src":  "https://github.com/gabimancini/light-of-angels/tree/main/asset/img/gallery/gallery-2.jpeg"
+        "src":  "asset/img/gallery/gallery-2.jpeg"
     }
    
 ]
