@@ -1,0 +1,76 @@
+#section-gallery {
+    margin: 0 auto;
+    max-width: 80%;
+
+    @media screen and(max-width:600px) {
+        max-width: 100%;
+    }
+
+    h4 {
+        padding: 40px 40px 20px;
+
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 200px;
+            height: 3px;
+            background-color: #A4D0E9;
+            position: absolute;
+            bottom: 10px;
+            left: 40px;
+        }
+
+        span {
+            color: #A4D0E9;
+
+        }
+    }
+
+    #gallery,
+    #gallery2019,
+    #gallery2020April {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style-type: none;
+
+        }
+
+
+        li {
+            width: 30%;
+
+            @media screen and(max-width:600px) {
+                width: 45%;
+            }
+
+            @media screen and(max-width:400px) {
+                width: 100%;
+            }
+
+
+            img {
+                height: 250px;
+                width: 250px;
+                object-fit: cover;
+                transition: 1.2s;
+            }
+        }
+
+        img:hover {
+            transform: scale(1.5);
+            border: 10px solid #fff;
+            box-shadow: 10px 10px 10px #000;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+
+    }
+}
+
+.banner-gallery {
+    height: auto;
+
+}

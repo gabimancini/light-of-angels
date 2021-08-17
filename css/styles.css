@@ -264,9 +264,29 @@ blockquote {
   max-width: 80%;
 }
 
+@media screen and (max-width: 600px) {
+  #section-gallery {
+    max-width: 100%;
+  }
+}
+
 #section-gallery h4 {
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding: 40px 40px 20px;
+  position: relative;
+}
+
+#section-gallery h4:after {
+  content: "";
+  width: 200px;
+  height: 3px;
+  background-color: #A4D0E9;
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+}
+
+#section-gallery h4 span {
+  color: #A4D0E9;
 }
 
 #section-gallery #gallery ul,
@@ -278,32 +298,40 @@ blockquote {
   list-style-type: none;
 }
 
-#section-gallery #gallery ul li,
-#section-gallery #gallery2019 ul li,
-#section-gallery #gallery2020April ul li {
+#section-gallery #gallery li,
+#section-gallery #gallery2019 li,
+#section-gallery #gallery2020April li {
   width: 30%;
 }
 
 @media screen and (max-width: 600px) {
-  #section-gallery #gallery ul li,
-  #section-gallery #gallery2019 ul li,
-  #section-gallery #gallery2020April ul li {
+  #section-gallery #gallery li,
+  #section-gallery #gallery2019 li,
+  #section-gallery #gallery2020April li {
     width: 45%;
   }
 }
 
-#section-gallery #gallery ul li img,
-#section-gallery #gallery2019 ul li img,
-#section-gallery #gallery2020April ul li img {
+@media screen and (max-width: 400px) {
+  #section-gallery #gallery li,
+  #section-gallery #gallery2019 li,
+  #section-gallery #gallery2020April li {
+    width: 100%;
+  }
+}
+
+#section-gallery #gallery li img,
+#section-gallery #gallery2019 li img,
+#section-gallery #gallery2020April li img {
   height: 250px;
   width: 250px;
   object-fit: cover;
   transition: 1.2s;
 }
 
-#section-gallery #gallery ul img:hover,
-#section-gallery #gallery2019 ul img:hover,
-#section-gallery #gallery2020April ul img:hover {
+#section-gallery #gallery img:hover,
+#section-gallery #gallery2019 img:hover,
+#section-gallery #gallery2020April img:hover {
   transform: scale(1.5);
   border: 10px solid #fff;
   box-shadow: 10px 10px 10px #000;
