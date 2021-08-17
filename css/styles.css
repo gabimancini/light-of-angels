@@ -68,6 +68,23 @@ p, blockquote, figcaption {
   color: #fff !important;
 }
 
+.right-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .right-nav {
+    flex-direction: column;
+  }
+}
+
+.right-nav .btn-lang {
+  font-size: 12px;
+}
+
 .banner {
   height: 500px;
   background: url("../asset/img/fondo/fondo.jpeg") no-repeat;
@@ -78,7 +95,7 @@ p, blockquote, figcaption {
 }
 
 .banner .banner-text {
-  max-width: 20%;
+  max-width: 30%;
   color: #fff;
 }
 
@@ -339,7 +356,7 @@ blockquote {
   cursor: zoom-in;
 }
 
-.banner-gallery {
+.banner-gallery, .banner-about {
   height: auto;
 }
 
@@ -444,8 +461,8 @@ blockquote {
 }
 
 footer {
-  background-color: #000;
-  color: #949281;
+  background-color: #239adf;
+  color: #000;
 }
 
 footer .footer-top {
@@ -508,7 +525,7 @@ footer .contact > div a {
 }
 
 footer .contact > div i {
-  color: #949281;
+  color: #000;
   margin-right: 20px;
 }
 
@@ -517,7 +534,7 @@ footer .social > div i {
 }
 
 footer .footer-bottom {
-  background-color: #949281;
+  background-color: #fff;
   color: #000;
   font-size: 0.4rem;
   font-style: italic;

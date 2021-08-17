@@ -1,6 +1,6 @@
 footer {
-    background-color: #000;
-    color: rgb(148, 146, 129);
+    background-color: #239adf;
+    color: #000;
     .footer-top {
 	display: flex;
 	justify-content: space-between; 
@@ -57,7 +57,7 @@ footer .contact>div a {
 }
 
 footer .contact>div i {
-	color: rgb(148, 146, 129);
+	color: #000;
 	margin-right: 20px;
 }
 footer .social>div i {
@@ -65,7 +65,7 @@ footer .social>div i {
 }
 
 footer .footer-bottom {
-	background-color: rgb(148, 146, 129);
+	background-color: #fff;
 	color: #000;
 	font-size: 0.4rem;
 	font-style: italic;
