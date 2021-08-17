@@ -46,6 +46,10 @@ p, blockquote, figcaption {
   font-weight: 200;
 }
 
+u, ol {
+  list-style-type: none;
+}
+
 .navbar-brand {
   font-weight: 100;
 }
