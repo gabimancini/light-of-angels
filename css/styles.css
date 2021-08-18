@@ -183,11 +183,11 @@ u, ol {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  padding: 30px 0;
 }
 
 #donators .donators_people {
   width: 14%;
-  padding: 30px 0;
 }
 
 @media screen and (max-width: 480px) {
