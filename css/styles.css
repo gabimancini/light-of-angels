@@ -14,6 +14,23 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img, video {
+  max-width: 100%;
+}
+
+p, blockquote, figcaption {
+  font-weight: 200;
+}
+
+/* Bloques */
 section {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -29,25 +46,9 @@ section {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-}
-
 .donate {
   color: #fff;
   width: 100px;
-}
-
-img {
-  max-width: 100%;
-}
-
-p, blockquote, figcaption {
-  font-weight: 200;
-}
-
-u, ol {
-  list-style-type: none;
 }
 
 .navbar-brand {
@@ -74,38 +75,45 @@ u, ol {
 
 .right-nav {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 10px;
-  align-items: center;
   margin: 0;
-}
-
-@media screen and (max-width: 600px) {
-  .right-nav {
-    flex-direction: column;
-  }
 }
 
 .right-nav .btn-lang {
   font-size: 12px;
+  line-height: 2.5;
 }
 
 .banner {
   height: 500px;
   background: url("../asset/img/fondo/fondo.jpeg") no-repeat;
   background-size: cover;
+}
+
+.banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .banner .banner-text {
-  max-width: 30%;
+  max-width: 25%;
   color: #fff;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 900px) {
   .banner .banner-text {
-    max-width: 90%;
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .banner .banner-text {
+    max-width: 60%;
   }
 }
 
@@ -126,6 +134,12 @@ u, ol {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 768px) {
+  #mission .container > div {
+    flex-direction: column;
+  }
+}
+
 #mission .container .mission_text,
 #mission .container .mission_pics {
   width: 50%;
@@ -133,10 +147,11 @@ u, ol {
   text-align: center;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   #mission .container .mission_text,
   #mission .container .mission_pics {
     width: 100%;
+    display: flex;
   }
 }
 
@@ -146,10 +161,10 @@ u, ol {
   box-shadow: 5px -5px 5px #abb1b4;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   #mission .container .mission_text img,
   #mission .container .mission_pics img {
-    max-width: 100%;
+    max-width: 50%;
   }
 }
 
@@ -184,25 +199,114 @@ u, ol {
   flex-wrap: wrap;
   gap: 40px;
   padding: 30px 0;
+  text-align: center;
 }
 
-#donators .donators_people {
-  width: 14%;
-}
-
-@media screen and (max-width: 480px) {
-  #donators .donators_people {
-    width: 35%;
+@media screen and (max-width: 768px) {
+  #donators .container > div {
+    flex-direction: column;
   }
 }
 
-#donators .donators_people figure img {
+#donators .container > div .donators_people {
+  width: 60%;
+  display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  #donators .container > div .donators_people {
+    font-size: 12px;
+  }
+}
+
+#donators .container > div .donators_people ul {
+  width: 50%;
+  text-align: left;
+  line-height: 2;
+}
+
+#donators .container > div .donators_people ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+#donators .container > div .donators_people_img {
+  width: 30%;
+  position: relative;
+}
+
+#donators .container > div .donators_people_img::before {
+  content: "";
+  background-color: white;
+  border-left: 6px solid white;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 80%;
+  height: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  #donators .container > div .donators_people_img::before {
+    top: -30px;
+    right: 0px;
+  }
+}
+
+#donators .container > div .donators_people_img::after {
+  content: "";
+  background-color: white;
+  border-left: 6px solid white;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 10px;
+  height: 90%;
+}
+
+@media screen and (max-width: 480px) {
+  #donators .container > div .donators_people_img::after {
+    right: 0px;
+    top: -20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #donators .container > div .donators_people_img img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #donators .container > div .donators_people, #donators .container > div .donators_people_img {
+    width: 100%;
+  }
+}
+
+#testimonial .container > div .testimonial_video::before, #testimonial .container > div .testimonial_video::after {
+  content: "";
+  background-color: #A4D0E9;
+  border-left: 6px solid #A4D0E9;
+  position: absolute;
+  left: -30px;
+  top: -30px;
 }
 
 #testimonial .container > div {
   display: flex;
   flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #testimonial .container > div {
+    flex-direction: column;
+  }
 }
 
 #testimonial .container > div .testimonial_text,
@@ -210,11 +314,25 @@ u, ol {
   width: 50%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   #testimonial .container > div .testimonial_text,
   #testimonial .container > div .testimonial_video {
     width: 100%;
   }
+}
+
+#testimonial .container > div .testimonial_video {
+  position: relative;
+}
+
+#testimonial .container > div .testimonial_video::before {
+  width: 80%;
+  height: 10px;
+}
+
+#testimonial .container > div .testimonial_video::after {
+  width: 10px;
+  height: 90%;
 }
 
 #testimonial .container > div .testimonial_text {
@@ -235,26 +353,11 @@ u, ol {
 }
 
 /* Blockquote */
-blockquote:nth-child(1) {
+blockquote {
   text-indent: -0.45em;
-  border-top: 8px solid #A4D0E9;
-  border-right: 10px solid #A4D0E9;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   font-size: 1.2rem;
   padding: 20px;
   align-self: flex-end;
-}
-
-blockquote:nth-child(2) {
-  text-indent: -0.45em;
-  border-top: 8px solid #A4D0E9;
-  border-left: 10px solid #A4D0E9;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  font-size: 1.2rem;
-  padding: 20px;
-  align-self: flex-start;
 }
 
 @supports (hanging-punctuation: first) {
@@ -285,7 +388,7 @@ blockquote {
   max-width: 80%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (mobileBreakpoint) {
   #section-gallery {
     max-width: 100%;
   }
@@ -422,7 +525,11 @@ blockquote {
 }
 
 #contact form > div > div {
-  width: 33%;
+  width: 48%;
+}
+
+#contact form > div > div:nth-child(3) {
+  width: 100%;
 }
 
 @media screen and (max-width: 480px) {
@@ -465,7 +572,6 @@ blockquote {
 }
 
 footer {
-  background-color: #239adf;
   color: #000;
 }
 
@@ -473,6 +579,7 @@ footer .footer-top {
   display: flex;
   justify-content: space-between;
   padding: 70px 20px;
+  font-size: 1rem;
 }
 
 footer .footer-top > div {
@@ -507,12 +614,13 @@ footer .footer-top > div:nth-child(1) {
 }
 
 .footer-top > div h4 {
-  font-size: 1.4rem;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
+  color: #00bbff;
+  font-size: 1rem;
 }
 
 .footer-logo img {
-  max-width: 300px;
+  max-width: 120px;
 }
 
 footer .social > div,
@@ -526,6 +634,7 @@ footer .social > div a,
 footer .contact > div a {
   padding-bottom: 10px;
   color: inherit;
+  font-size: 0.9rem;
 }
 
 footer .contact > div i {
@@ -557,9 +666,5 @@ footer .footer-bottom {
 
 #credits .social a:hover {
   color: rgba(255, 215, 0, 0.7);
-}
-
-.footer-logo img {
-  max-width: 200px;
 }
 /*# sourceMappingURL=styles.css.map */
