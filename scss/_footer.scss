@@ -1,65 +1,72 @@
 footer {
-    background-color: #239adf;
-    color: #000;
-    .footer-top {
-	display: flex;
-	justify-content: space-between; 
-    padding: 70px 20px;
-    >div {
-	width: 30%;
-	text-align: left;
-	@media screen and (max-width: 480px) {
-		width: 100%;
-		width: 100%;
-		text-align: center;
-		padding-bottom: 2em;
-	}
-    &:nth-child(1) {
-        width: 40%;
-		text-align: center;
-		@media screen and (max-width: 480px) {
-  
-			width: 100%;
-	 
-	}
-	
-    }
-}
-}
-@media screen and (max-width: 480px) {
+	color: #000;
+ border-top: 3px solid $mainColor;
 	.footer-top {
-		flex-direction: column;
+		display: flex;
+		justify-content: space-between;
+		padding: 70px 20px;
+		font-size: 1rem;
+
+		>div {
+			width: 30%;
+			text-align: left;
+
+			@media screen and (max-width: 480px) {
+				width: 100%;
+				width: 100%;
+				text-align: center;
+				padding-bottom: 2em;
+			}
+
+			&:nth-child(1) {
+				width: 40%;
+				text-align: center;
+				@media screen and (max-width: 480px) {
+					width: 100%;
+				}
+
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.footer-top {
+			flex-direction: column;
+		}
 	}
 }
-}
- 
+
 
 .footer-top>div h4 {
-	font-size: 1.4rem;
-	padding-bottom: 20px;
+	padding-bottom: 8px;
+	color: $secondaryColor;
+	font-size: 1rem;
 }
 
 .footer-logo img {
-	max-width: 300px;
+	max-width: 120px;
 }
 
 footer .social>div,
 footer .contact>div {
 	display: flex;
-    flex-direction: column;
-    font-weight: 200;;
+	flex-direction: column;
+	font-weight: 200;
+	;
 }
 
 footer .social>div a,
 footer .contact>div a {
 	padding-bottom: 10px;
 	color: inherit;
+	font-size: 0.9rem;
 }
 
 footer .contact>div i {
 	color: #000;
 	margin-right: 20px;
 }
+
 footer .social>div i {
 	margin-right: 20px;
 }
@@ -87,8 +94,3 @@ footer .footer-bottom {
 #credits .social a:hover {
 	color: rgba(255, 215, 0, 0.7)
 }
- 
-.footer-logo img {
-    max-width: 200px;
-}
-

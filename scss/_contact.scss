@@ -1,21 +1,22 @@
 #contact{
-    background-color: #A4D0E9;
+    background-color: $mainColor;
+    padding-bottom: 0;
     .container{
         display: flex;
         flex-wrap: wrap;
-        
     }
     form{
         display: flex;
         flex-direction: column;
         width: 50%; 
         padding: 0px 50px;
-        color: #fff;
+        color: rgb(150, 160, 153);
         @media screen and (max-width: 480px){
             width: 100%;
         }
         label{
             text-transform: uppercase;
+            padding-bottom: 8px;
         }
         input, textarea{
             border: none;
@@ -27,7 +28,7 @@
         input[type="submit"]{
             width: 60px;
             margin-top: 20px;
-            background-color: rgba(115, 192, 236, 0.9);
+            background-color: $mainColor;
             color: #fff;
             text-transform: uppercase;
             @media screen and (max-width: 480px){
@@ -41,7 +42,10 @@
             margin-bottom: 20px;
 
             >div{
-                width: 33%;
+                width: 48%;
+                &:nth-child(3){
+                    width: 100%;
+                }
                 @media screen and (max-width: 480px){
                    width: 100%;
                 }

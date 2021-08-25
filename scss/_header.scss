@@ -12,18 +12,20 @@
     margin: 0 auto; 
 }
 .donate{
-    background-color: #A4D0E9;
-    color: #fff !important;
+    background-color: $mainColor;
+    color: rgba(0,0,0,.55);
+
 }
 .right-nav{
     display: flex;
-    gap: 10px;
-    align-items: center;
-    margin:0;
-    @media screen and (max-width:600px){
-        flex-direction: column;
-    }
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px; 
+    margin:0; 
+    
     .btn-lang{
         font-size: 12px; 
+        line-height: 2.5;
+       
     }
 }

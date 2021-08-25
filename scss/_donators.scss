@@ -1,18 +1,86 @@
-#donators{
-    background-color: #A4D0E9;
-    .container>div{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-    .donators_people{
-        width: 14% ;
-        padding: 30px 0;
-        @media screen and (max-width: 480px){
-            width: 35% ;
-       }
-    figure img{
-border-radius: 50%;;
-    }   }
+ #donators {
+     background-color: #A4D0E9;
+
+     .container>div {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 40px;
+         padding: 30px 0;
+         text-align: center;
+         @media screen and (max-width: 768px){
+            flex-direction: column;
+        }
+      
+            .donators_people {
+             width: 60%;
+             display: flex; 
+             @media screen and (max-width: 480px){
+               font-size: 12px;
+             }
+             ul {
+                 width: 50%;
+                 text-align: left;
+                 line-height: 2;
+
+                 li::before {
+                     content: "";
+                     width: 10px;
+                     height: 10px;
+                     border-radius: 50%;
+                     background-color: white;
+                     display: inline-block;
+                     margin-right: 8px;
+
+
+                 }
+             }
+         }
+
+         .donators_people_img {
+             width: 30%;
+             position: relative;
+
+             &::before {
+                 content: "";
+                 background-color: white;
+                 border-left: 6px solid white;
+                 position: absolute;
+                 right: -30px;
+                 top: -30px;
+                 width:80%;
+                 height: 10px;   
+                 @media screen and (max-width: 480px){
+                    top: -30px;
+                right: 0px;
+                 }
+             }
+             &::after {
+                content: "";
+                background-color: white;
+                border-left: 6px solid white;
+                position: absolute;
+                right: -30px;
+                top: -30px;
+                width:10px;
+                height: 90%;  
+                @media screen and (max-width: 480px){
+                    right: 0px;
+                top: -20px;
+                 }
+            }
+img{
+    @media screen and (max-width: 480px){
+        width:80%;
+     }
 }
+
+         }
+         .donators_people, .donators_people_img{
+            @media screen and (max-width: 768px){
+               width: 100%;
+            }
+        }     
+
+     }
+ }

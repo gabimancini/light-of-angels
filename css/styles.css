@@ -69,8 +69,8 @@ section {
 }
 
 .donate {
-  background-color: #A4D0E9;
-  color: #fff !important;
+  background-color: #d4f2cf;
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .right-nav {
@@ -88,8 +88,10 @@ section {
 
 .banner {
   height: 500px;
-  background: url("../asset/img/fondo/fondo.jpeg") no-repeat;
   background-size: cover;
+  background-color: #bdecb6;
+  background: #d4f2cf;
+  background: linear-gradient(4deg, rgba(212, 242, 207, 0.923407) 0%, #f1f5f0 100%);
 }
 
 .banner-container {
@@ -126,6 +128,20 @@ section {
 
 .banner .banner-text h3 {
   font-weight: 900;
+}
+
+.banner-gallery,
+.banner-about,
+.banner-donate {
+  height: auto;
+  text-align: center;
+}
+
+.banner-gallery .banner-text,
+.banner-about .banner-text,
+.banner-donate .banner-text {
+  max-width: 100%;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #mission .container > div {
@@ -187,6 +203,11 @@ section {
 
 #mission .container .mission_text p {
   text-align: left;
+}
+
+#mission .container .mission_text span a {
+  color: #64cf54;
+  font-weight: 900;
 }
 
 #donators {
@@ -290,8 +311,8 @@ section {
 
 #testimonial .container > div .testimonial_video::before, #testimonial .container > div .testimonial_video::after {
   content: "";
-  background-color: #A4D0E9;
-  border-left: 6px solid #A4D0E9;
+  background-color: #d4f2cf;
+  border-left: 6px solid #d4f2cf;
   position: absolute;
   left: -30px;
   top: -30px;
@@ -463,12 +484,9 @@ blockquote {
   cursor: zoom-in;
 }
 
-.banner-gallery, .banner-about {
-  height: auto;
-}
-
 #contact {
-  background-color: #A4D0E9;
+  background-color: #d4f2cf;
+  padding-bottom: 0;
 }
 
 #contact .container {
@@ -481,7 +499,7 @@ blockquote {
   flex-direction: column;
   width: 50%;
   padding: 0px 50px;
-  color: #fff;
+  color: #96a099;
 }
 
 @media screen and (max-width: 480px) {
@@ -492,6 +510,7 @@ blockquote {
 
 #contact form label {
   text-transform: uppercase;
+  padding-bottom: 8px;
 }
 
 #contact form input, #contact form textarea {
@@ -506,7 +525,7 @@ blockquote {
 #contact form input[type="submit"] {
   width: 60px;
   margin-top: 20px;
-  background-color: rgba(115, 192, 236, 0.9);
+  background-color: #d4f2cf;
   color: #fff;
   text-transform: uppercase;
 }
@@ -573,6 +592,7 @@ blockquote {
 
 footer {
   color: #000;
+  border-top: 3px solid #d4f2cf;
 }
 
 footer .footer-top {
@@ -615,7 +635,7 @@ footer .footer-top > div:nth-child(1) {
 
 .footer-top > div h4 {
   padding-bottom: 8px;
-  color: #00bbff;
+  color: #64cf54;
   font-size: 1rem;
 }
 
@@ -666,5 +686,121 @@ footer .footer-bottom {
 
 #credits .social a:hover {
   color: rgba(255, 215, 0, 0.7);
+}
+
+#about h2 {
+  padding-bottom: 30px;
+}
+
+#about .container h2 {
+  color: #64cf54;
+}
+
+#about .container p span {
+  font-weight: 900;
+}
+
+.team-boxed {
+  color: #313437;
+  background-color: #eef4f7;
+  text-align: center;
+}
+
+.team-boxed p {
+  color: #7d8285;
+}
+
+.team-boxed h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .team-boxed h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
+}
+
+.team-boxed .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.team-boxed .intro p {
+  margin-bottom: 0;
+}
+
+.team-boxed .people {
+  padding: 50px 0;
+}
+
+.team-boxed .item {
+  text-align: center;
+}
+
+.team-boxed .item .box {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.team-boxed .item .name {
+  font-weight: bold;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  color: inherit;
+}
+
+.team-boxed .item .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #d0d0d0;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.team-boxed .item .description {
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.team-boxed .item img {
+  max-width: 160px;
+}
+
+.team-boxed .social {
+  font-size: 18px;
+  color: #a2a8ae;
+}
+
+.team-boxed .social a {
+  color: inherit;
+  margin: 0 10px;
+  display: inline-block;
+  opacity: 0.7;
+}
+
+.team-boxed .social a:hover {
+  opacity: 1;
+}
+
+.icon-donate {
+  font-size: 5rem;
+  color: #64cf54;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 2rem;
+}
+
+.team-boxed .social a {
+  background-color: #64cf54;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

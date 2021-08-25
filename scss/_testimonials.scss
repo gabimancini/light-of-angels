@@ -1,16 +1,41 @@
+%marco_video{
+    content:"";
+    background-color: $mainColor;
+    border-left: 6px solid $mainColor; 
+    position: absolute;
+    left:-30px;
+    top: -30px
+}
 #testimonial {
+
     .container>div {
         display: flex;
         flex-wrap: wrap;
-
+        padding: 50px 20px;
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+        }
         .testimonial_text,
         .testimonial_video {
             width: 50%;
-            @media screen and (max-width: 480px){
+            @media screen and (max-width: 768px){
                 width: 100%;
             }
+          
         }
-
+        .testimonial_video {
+            position: relative;
+           &::before { 
+               @extend %marco_video;
+            width:80%;
+            height: 10px;   
+        } 
+        &::after { 
+            @extend %marco_video;
+            width:10px;
+            height: 90%;  
+        } 
+        }
         .testimonial_text {
             height: 210px;
             display: flex;
@@ -27,27 +52,12 @@
     }
 }
 /* Blockquote */
-blockquote:nth-child(1) {
-    text-indent: -0.45em;
-    border-top: 8px solid #A4D0E9;
-    border-right: 10px solid #A4D0E9;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+blockquote  {
+    text-indent: -0.45em; 
     font-size: 1.2rem;
     padding: 20px;
     align-self: flex-end
-}
-
-blockquote:nth-child(2) {
-    text-indent: -0.45em;
-    border-top: 8px solid #A4D0E9;
-    border-left: 10px solid #A4D0E9;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    font-size: 1.2rem;
-    padding: 20px;
-    align-self: flex-start;
-}
+} 
 
 @supports (hanging-punctuation: first) {
     blockquote {

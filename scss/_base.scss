@@ -5,6 +5,19 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+ul, ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img, video{
+    max-width: 100%;
+}
+p, blockquote, figcaption{
+    font-weight: 200;
+}
+/* Bloques */ 
 section{
     padding-top: 30px;
     padding-bottom: 30px;
@@ -18,16 +31,10 @@ section{
         @extend %zoomIn;
     }
 }
-a{
-    text-decoration: none;
-}
+
 .donate{
     color: #fff;
     width: 100px;
 }
-img{
-    max-width: 100%;
-}
-p, blockquote, figcaption{
-    font-weight: 200;
-}
+
+
