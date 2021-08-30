@@ -9,11 +9,12 @@
     }
 }
 .navbar-nav {
-    margin: 0 auto; 
-}
+    margin: 0 auto;  
+   
+} 
 .donate{
-    background-color: $mainColor;
-    color: rgba(0,0,0,.55);
+    background-color: $secondaryColor;
+    color: white !important;
 
 }
 .right-nav{
@@ -21,11 +22,22 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 10px; 
-    margin:0; 
-    
+   margin: 0;
+    @media screen and (max-width:600px){
+        margin-top:20px; 
+        }
+    .nav-item:nth-child(2){
+        @media screen and (max-width:900px){
+            order: -1;
+            }
+    }
     .btn-lang{
         font-size: 12px; 
         line-height: 2.5;
        
     }
+}
+.navbar-light .navbar-nav .nav-link.active{
+    
+    color: $secondaryColor;
 }

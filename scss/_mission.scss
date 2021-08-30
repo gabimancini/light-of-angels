@@ -4,46 +4,95 @@
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            @media screen and (max-width: 768px){
+
+            @media screen and (max-width: 600px) {
                 flex-direction: column;
             }
-        } 
+        }
+
         .mission_text,
         .mission_pics {
             width: 50%;
             padding: 30px 0;
             text-align: center;
-            @media screen and (max-width: 768px){
-                width: 100%;
-                display: flex;
+            position: relative;
+
+            @media screen and (max-width: 600px) {
+                width: 100%;  
+                padding: 0 30px 30px 30px;
             }
-            img{
-                max-width: 350px;
-                box-shadow: 5px -5px 5px #abb1b4;
-                @media screen and (max-width: 768px){
+
+            img {
+                max-width:250px;
+                border: 10px solid #fbfcfb;
+                outline:1px solid #ccc;
+
+                @media screen and (max-width: 768px) {
                     max-width: 50%;
                 }
             }
-           
-            img:nth-child(1){
-                transform: rotate(-20deg); 
+
+            img:nth-child(1) {
+                transform: rotate(-9deg); 
+                position: absolute;
+                left: 10px;
+                top: 0;
+                z-index: 2;
             }
-            img:nth-child(2){
+
+            img:nth-child(2) {
                 transform: rotate(6deg);
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 1;
+            }
+
+            img:nth-child(3) { 
+                position: absolute;
+                bottom: 0px;
+                left:0%; 
+                transform: rotate(6deg);
+                z-index: 1;
+            }
+            img:nth-child(4) { 
+                position: absolute;
+                bottom: 0px;
+                right:0%; 
+                transform: rotate(-6deg);
+                z-index: -1;
             }
         }
-        .mission_text{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 300px;
-            p{
-                text-align: left;
-            } 
-            span a{
-                color: $secondaryColor;
-                font-weight: 900;
-            }
-        } 
+    }
+
+    .mission_text,
+    .mission_pics {
+        height: 360px; 
+    
+    }
+    .mission_text{
+        @media screen and (max-width: 768px) {
+            height: auto;  
+        }
+    }
+    .mission_pics {
+        @media screen and (max-width: 768px) {
+            height: 240px; 
+        }
+    }
+    .mission_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        p {
+            text-align: left;
+        }
+
+        span a {
+            color: $secondaryColor;
+            font-weight: 900;
+        }
     }
 }

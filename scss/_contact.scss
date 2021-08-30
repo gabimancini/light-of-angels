@@ -10,9 +10,10 @@
         flex-direction: column;
         width: 50%; 
         padding: 0px 50px;
-        color: rgb(150, 160, 153);
-        @media screen and (max-width: 480px){
+        color: $thirdColor;
+        @media screen and (max-width: 600px){
             width: 100%;
+            padding: 0;
         }
         label{
             text-transform: uppercase;
@@ -21,19 +22,18 @@
         input, textarea{
             border: none;
         }
+        input{
+            height: 30px;
+        }
         textarea{
             resize: none;
             height: 180px;
         }
-        input[type="submit"]{
-            width: 60px;
+        input[type="submit"]{ 
             margin-top: 20px;
-            background-color: $mainColor;
+            background-color: $secondaryColor;
             color: #fff;
-            text-transform: uppercase;
-            @media screen and (max-width: 480px){
-                width: 100%;
-            }
+            text-transform: uppercase; 
         }
         >div  { 
             display: flex;
@@ -46,7 +46,7 @@
                 &:nth-child(3){
                     width: 100%;
                 }
-                @media screen and (max-width: 480px){
+                @media screen and (max-width: 768px){
                    width: 100%;
                 }
                
@@ -64,6 +64,9 @@
         text-align: center;
         padding: 0px 20px;
         width: 50%;
+        >p{
+            font-weight: 600;
+        }
         @media screen and (max-width: 480px){
             width: 100%;
             padding-bottom: 30px;

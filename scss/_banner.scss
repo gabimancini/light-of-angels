@@ -1,10 +1,8 @@
 .banner {
-  height: 500px;
+  height: 530px;
   background-size: cover;
-  background-color: #bdecb6;
-  background: rgb(212, 242, 207);
-  background: linear-gradient(4deg, rgba(212, 242, 207, 0.923406862745098) 0%, rgba(241, 245, 240, 1) 100%);
-
+  background-color:$mainColor;
+  
   &-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -14,8 +12,9 @@
   }
 
   .banner-text {
-    max-width: 25%;
+    max-width: 35%;
     color: #fff;
+    text-align: center;
 
     @media screen and (max-width: 900px) {
       max-width: 40%;
@@ -26,6 +25,7 @@
     }
 
     img {
+      max-width: 70%; 
       @extend %zoomIn;
     }
 
@@ -34,6 +34,7 @@
       font-weight: 200;
       text-align: center;
       text-shadow: 10px 10px 8px #000;
+      margin-top: 30px;
       @extend %zoomIn;
     }
 
