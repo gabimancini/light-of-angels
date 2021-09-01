@@ -59,7 +59,8 @@ blockquote  {
     text-indent: -0.45em; 
     font-size: 1.2rem;
     padding: 20px;
-    align-self: flex-end
+    text-align: right;
+    line-height: 1;
 } 
 
 @supports (hanging-punctuation: first) {
@@ -71,14 +72,18 @@ blockquote  {
 
 blockquote::before {
     content: open-quote;
-    font-size: 2rem;
+    font-size: 4rem;
     color: #A4D0E9;
+    position: relative;
+    top: 20px;
 }
 
 blockquote::after {
     content: close-quote;
-    font-size: 2rem;
+    font-size: 4rem;
     color: #A4D0E9;
+    position: relative;
+    top: 20px;
 }
 
 blockquote {

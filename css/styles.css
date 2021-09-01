@@ -462,7 +462,8 @@ blockquote {
   text-indent: -0.45em;
   font-size: 1.2rem;
   padding: 20px;
-  align-self: flex-end;
+  text-align: right;
+  line-height: 1;
 }
 
 @supports (hanging-punctuation: first) {
@@ -474,14 +475,18 @@ blockquote {
 
 blockquote::before {
   content: open-quote;
-  font-size: 2rem;
+  font-size: 4rem;
   color: #A4D0E9;
+  position: relative;
+  top: 20px;
 }
 
 blockquote::after {
   content: close-quote;
-  font-size: 2rem;
+  font-size: 4rem;
   color: #A4D0E9;
+  position: relative;
+  top: 20px;
 }
 
 blockquote {
@@ -493,6 +498,10 @@ blockquote {
   max-width: 80%;
 }
 
+#section-gallery .container {
+  padding-bottom: 0;
+}
+
 @media screen and (mobileBreakpoint) {
   #section-gallery {
     max-width: 100%;
@@ -500,7 +509,7 @@ blockquote {
 }
 
 #section-gallery h4 {
-  padding: 40px 40px 20px;
+  padding: 40px 0;
   position: relative;
 }
 
@@ -510,62 +519,67 @@ blockquote {
   height: 3px;
   background-color: #A4D0E9;
   position: absolute;
-  bottom: 10px;
-  left: 40px;
+  bottom: 20px;
+  left: 0px;
 }
 
 #section-gallery h4 span {
   color: #A4D0E9;
 }
 
-#section-gallery #gallery ul,
-#section-gallery #gallery2019 ul,
-#section-gallery #gallery2020April ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  list-style-type: none;
+.photos .item {
+  padding: 20px;
 }
 
-#section-gallery #gallery li,
-#section-gallery #gallery2019 li,
-#section-gallery #gallery2020April li {
-  width: 30%;
-}
-
-@media screen and (max-width: 600px) {
-  #section-gallery #gallery li,
-  #section-gallery #gallery2019 li,
-  #section-gallery #gallery2020April li {
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  #section-gallery #gallery li,
-  #section-gallery #gallery2019 li,
-  #section-gallery #gallery2020April li {
-    width: 100%;
-  }
-}
-
-#section-gallery #gallery li img,
-#section-gallery #gallery2019 li img,
-#section-gallery #gallery2020April li img {
-  height: 250px;
-  width: 250px;
+.photos .item img {
   object-fit: cover;
-  transition: 1.2s;
 }
 
-#section-gallery #gallery img:hover,
-#section-gallery #gallery2019 img:hover,
-#section-gallery #gallery2020April img:hover {
-  transform: scale(1.5);
-  border: 10px solid #fff;
-  box-shadow: 10px 10px 10px #000;
-  z-index: 999;
-  cursor: zoom-in;
+.photo-gallery {
+  color: #313437;
+  background-color: #fff;
+}
+
+.photo-gallery p {
+  color: #7d8285;
+}
+
+.photo-gallery h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .photo-gallery h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
+}
+
+.photo-gallery .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.photo-gallery .intro p {
+  margin-bottom: 0;
+}
+
+.photo-gallery .photos {
+  padding-bottom: 20px;
+}
+
+.photo-gallery .item {
+  padding-bottom: 30px;
+}
+
+#gallery2020April img {
+  height: 200px;
+  object-fit: cover;
 }
 
 #contact {
@@ -678,7 +692,6 @@ blockquote {
 
 footer {
   color: #000;
-  border-top: 3px solid #94D2BD;
 }
 
 footer .footer-top {
@@ -754,8 +767,8 @@ footer .social > div i {
 
 footer .footer-bottom {
   background-color: #fff;
-  color: #000;
-  font-size: 0.4rem;
+  color: #005F73;
+  font-size: 0.9rem;
   font-style: italic;
 }
 

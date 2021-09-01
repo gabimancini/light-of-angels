@@ -9,12 +9,7 @@
         "id": "001", 
         "name": "mision", 
         "src": "asset/img/gallery/2020_april/13.jpeg"
-    },
-    {
-        "id": "001", 
-        "name": "mision", 
-        "src": "asset/img/gallery/2020_april/14.jpeg"
-    },
+    }, 
     {
         "id": "001", 
         "name": "mision", 
@@ -39,10 +34,5 @@
         "id": "001", 
         "name": "mision", 
         "src": "asset/img/gallery/2020_april/19.jpeg"
-    },
-    {
-        "id": "001", 
-        "name": "mision", 
-        "src": "asset/img/gallery/2020_april/20.jpeg"
-    }
+    } 
 ]
