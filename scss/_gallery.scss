@@ -84,3 +84,9 @@
           object-fit: cover;
       }
   }
+  #gallery2019May{
+   .item:nth-child(1) a img, .item:nth-child(2) a img, .item:nth-child(3) a img{
+        height: 200px;
+        object-fit: cover;
+    }
+}
