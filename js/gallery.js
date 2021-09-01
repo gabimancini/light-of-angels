@@ -66,3 +66,47 @@
        }
   
      })
+      /* Galería 2018 */
+   let url2018Dec = 'http://127.0.0.1:5502/data/gallery_2018_dec.json';
+   const urlGitHub2018Dec  = "https://gabimancini.github.io/light-of-angels/data/gallery_2018_dec.json";
+  
+   let gallery2018Dec = document.querySelector("#gallery2018Dec");
+   fetch(urlGitHub2018Dec  )
+     .then(res => res.json())
+     .then(data => {
+       console.log('Checkout this JSON! ', data)
+       for (i = 0; i < data.length; i++) {
+         const img = document.createElement("img");
+         img.alt = data[i].name;
+         const imgAlt = img.alt;
+         img.src = data[i].src;
+         imgSrc = img.src;
+         const col = ` <div class="col-sm-6 col-md-4 col-lg-4 item"><a href="${imgSrc}"  data-lightbox="photos"><img src="${imgSrc}" alt="${imgAlt}"></a></div>`;
+  
+         console.log(img);
+         gallery2018Dec.insertAdjacentHTML("beforeend", col);
+       }
+  
+     })
+        /* Orphanage */
+   let urlOrphanage = 'http://127.0.0.1:5502/data/gallery_adult.json';
+   const urlGitHubOrphanage  = "https://gabimancini.github.io/light-of-angels/data/gallery_adult.json";
+  
+   let galleryOrphanage = document.querySelector("#galleryOrphanage");
+   fetch(urlGitHubOrphanage )
+     .then(res => res.json())
+     .then(data => {
+       console.log('Checkout this JSON! ', data)
+       for (i = 0; i < data.length; i++) {
+         const img = document.createElement("img");
+         img.alt = data[i].name;
+         const imgAlt = img.alt;
+         img.src = data[i].src;
+         imgSrc = img.src;
+         const col = ` <div class="col-sm-6 col-md-4 col-lg-4 item"><a href="${imgSrc}"  data-lightbox="photos"><img src="${imgSrc}" alt="${imgAlt}"></a></div>`;
+  
+         console.log(img);
+         galleryOrphanage.insertAdjacentHTML("beforeend", col);
+       }
+  
+     })
